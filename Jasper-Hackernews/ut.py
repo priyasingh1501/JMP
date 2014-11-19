@@ -1,10 +1,7 @@
 import unittest
-from jasper import latestStories
 from jasper import topStories
 
-class JasperTestCase(unittest.TestCase):
-    def test_latestStories(self):
-        self.assertTrue(latestStories())
+
 
 class JasperTestCase(unittest.TestCase):
     def test_topStories(self):
