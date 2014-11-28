@@ -20,4 +20,5 @@ def handle(text, mic, profile):
     print (stories);
     mic.say(stories);
     
+    //checking
     
