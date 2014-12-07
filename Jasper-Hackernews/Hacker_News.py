@@ -3,21 +3,18 @@ from hn import HN
 
 hn = HN()
 def topStories():
-    # print the first 10 of newest stories
-    for story in hn.get_stories(limit=10):
-        print (story.title);
-        return(story.rank, story.title)
+    # print the first 10 of top stories
          
-
- 
 
 WORDS=["STORIES","FROM","HACKERNEWS"]
 def isValid(text):
     return bool(re.search(r'\bstories from hackernews\b', text, re.IGNORECASE))
 
 def handle(text, mic, profile):
-    stories=topStories();
-    print (stories);
-    mic.say(stories);
+    mic.say("Hi.The top 10 stories are as follows: ");
+    for story in hn.get_stories(limit=10):
+        s_title = story.title;
+        s_rank=story.rank;
+        mic.say(s_rank + " " + s_title );
     
     
