@@ -15,7 +15,7 @@ def handle(text, mic, profile):
         s_title = story.title;
         s_rank=story.rank;
         mic.say(s_rank + " " + s_title );
-        return 1;
+return "1";
     
     
     
