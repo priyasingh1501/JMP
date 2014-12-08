@@ -30,12 +30,13 @@ def isValid(text):
     return bool(re.search(r'\bstories from hackernews\b', text, re.IGNORECASE))
 
 def handle(text, mic, profile):
+    """ Generates tehh desired output to the input text"""
     mic.say("Your top 10 stories are ");
     for story in hn.get_stories(limit=10):
         s_title = story.title;
         s_rank=story.rank;
         mic.say(s_rank + " " + s_title );
-return "1";
+    return "1";
     
     
     
